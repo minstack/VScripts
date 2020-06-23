@@ -32,7 +32,7 @@ This will version the consignment products that don't return on /api/2.0/consign
 3. `python3 ReversionConsginmentProducts.py`
 
 ## imageupload_sm
-Only to be used if vendcli is not working as expected.  This was written to when Google Drive seems to respond with 403 after a certain amount of downloads (maybe number of times or total bandwidth?).
+Only to be used if vendcli is not working as expected.  This was written because Google Drive seems to respond with 403 after a certain amount of downloads (maybe number of times or total bandwidth?).
 The window _seems_ to be an hour.  
 - This script will sleep for an hour after it hits a 403 and resumes until finished
 - The CSV format is the same as vendcli (`sku`, `handle`, `image_url`)
