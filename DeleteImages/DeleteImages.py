@@ -6,6 +6,7 @@ from datetime import datetime
 
 domain = ''
 token = ''
+csvfile = 'all'
 
 delay = 0.7
 
@@ -15,7 +16,6 @@ products = api.getProducts()
 prodidtoobj = api.getKeyToObjs(products, 'id')
 prodtoprocess = []
 
-csvfile = 'all'
 prodids = []
 
 if csvfile != 'all':
