@@ -69,6 +69,10 @@ Sales cannot be 'moved' if:
 When the duplicate customer is deleted, those sales will ultimately have an "Anonymous Customer" on the sale.
 
 ### Usage
+_NOTE_: ExportDupeCustomerCodes can be skipped if you already have a CSV with `merging_customer_code` and `deleting_customer_code` columns. That can be used directly on MergeCustomers.
+- `merging_customer_code` are the customer records to keep
+- `deleting_customer_code` are the customer records to move the sales to the above, corresponding customer record
+  - these are not deleted by the script, just a misleading name
 
 #### ExportDupeCustomerCodes
 1. Open the customer CSV
