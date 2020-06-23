@@ -22,7 +22,7 @@ This will version the consignment products that don't return on /api/2.0/consign
 - Results will be outputted in JSON format
 - Successful payloads and Errored payloads (in the same directory)
   - This is just in case there are any issue
-  - No issues have surface so far
+  - No issues have surfaced so far
 
 ### Usage
 1. A CSV file with an `id` column with all the consignment_ids (**not** consignment products)
