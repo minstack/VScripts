@@ -1,6 +1,7 @@
 import csv
 from collections import defaultdict
 import datetime as dt
+import time
 from os.path import expanduser
 
 def getColumn(csvFile, colName, inclEmpty=False):
@@ -38,7 +39,8 @@ def writeListToCSV(output, title, prefix, colHeader=None):
     if isinstance(output, list):
         rows = zip(output)
 
-    filename = prefix + dt.datetime.now().strftime("%Y-%m-%dT%H:%M") + title + ".csv"
+    # filename = prefix + dt.datetime.now().strftime("%Y-%m-%dT%H:%M") + title + ".csv"
+    filename = prefix + str(int(time.time())) + title + ".csv"
 
     #gui.setStatus("Writing {0}...".format(filename))
 
