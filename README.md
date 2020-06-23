@@ -88,7 +88,7 @@ When the duplicate customer is deleted, those sales will ultimately have an "Ano
 
 #### MergeCustomers
 1. Move exported CSV above in **step 10** to script directory
-      - will need full path if not moved in **step 3**.
+      - will need full path in **step 3** if not moved.
 2. Open MergeCustomers.py
 3. Update the values for `prefix`, `token` and `csvfile`
       - `csvfile` from **step 1**
