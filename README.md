@@ -20,7 +20,7 @@ These will be named along the lines of
 ## ReversionConsignmentProducts
 This will version the consignment products that don't return on /api/2.0/consignments/{consignment_id/products due to missing versions.
 - Results will be outputted in JSON format
-- Successful payloads and Errored payloads (in the same directory)
+- Exports successful payloads and Errored payloads (in the same directory)
   - This is just in case there are any issue
   - No issues have surfaced so far
 
