@@ -55,6 +55,8 @@ This was built to delete images due to the loading image from a bad import.
 2. Update the values for `domain`, `token` and `csvfile`
       - `csvfile` should either be `all` for deleting all images or the CSV filename with specified product IDs
       - The CSV file should have an `id` column with product IDs and not the image ID
+      - The CSV file must be in the same directory as the script if you only provide the CSV filename
+      - Fullpath is required if you don't have the file in the same directory
 3. Save
 4. `python3 DeleteImages.py`
 
