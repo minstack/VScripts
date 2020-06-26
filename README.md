@@ -7,7 +7,12 @@ Please download and install at https://www.python.org/ftp/python/3.8.3/python-3.
 All commands will be in the format:
 
   `python3 {script_name.py}`
-  
+
+## Install `requests`
+All scripts uses the requests library. After installing python3, please install `requests`
+1. Open terminal
+2. `pip3 install requests`
+
 ## Hardcoding Values
 Due to these scripts being written as needed with time constraints, there hasn't been any type of interface added.  Values will need to be hardcoded which will be at the top of the files.
 
