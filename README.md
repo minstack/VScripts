@@ -108,5 +108,15 @@ _NOTE_: ExportDupeCustomerCodes can be skipped if you already have a CSV with `m
 6. Failed sales to move are exported in CSV to desktop with sale payload and status code
       - these are for reference but usually nothing can be done due to the caveat above (sc/gc/loyalty)
 
+## Inventory Record Lookup by `product_id`
+For cases where developers report that `/api/2.0/inventory` does not return inventory records for a specific product or "there are missing inventory records".  Most likely, they haven't used version pagination properly and haven't pulled all the inventory records as a result.
 
-
+### Usage
+1. Open `inventory_records.py`
+2. Update the values for `domain`, `token` and `prod_id`
+      - Where `prod_id` is the `product_id` the developers are claiming to have missing inventory records
+3. Save
+4. `python3 inventory_records.py`
+5. The script will output 2 results that can be provided to the developer after 'prettifying' it with a JSON formatter of your choice.
+    1. `OUTLET TO INVENTORY MAPPED JSON` follows with a filtered object where the outlet name and id are mapped to their current inventory levels
+    2. `RAW INVENTORY RECORDS FROM THE /api/2.0/inventory ENDPOINT` follows with an array of inventory records from the inventory endpoint as-is.  It'll be what they should be seeing without any processed data from the endpoint.
