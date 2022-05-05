@@ -72,8 +72,11 @@ This will 'merge' customers based on duplicate **emails**. Merging in this case 
 Sales cannot be 'moved' if:
 - The sale involves some gift card, store credit or loyalty transaction
 - The sale is made under a deleted register
+- The sale is ONACCOUNT_CLOSED linked to accounting (Xero, QBO etc.)
 
 When the duplicate customer is deleted, those sales will ultimately have an "Anonymous Customer" on the sale.
+
+**NOTE: Do it in batches if possible and let the script finish in order to get the failed merge CSV exported to your desktop with the details**
 
 ### Usage
 _NOTE_: ExportDupeCustomerCodes can be skipped if you already have a CSV with `merging_customer_code` and `deleting_customer_code` columns. That can be used directly on MergeCustomers.
