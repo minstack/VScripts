@@ -72,7 +72,6 @@ This will 'merge' customers based on duplicate **emails**. Merging in this case 
 Sales cannot be 'moved' if:
 - The sale involves some gift card, store credit or loyalty transaction
 - The sale is made under a deleted register
-- The sale is `ONACCOUNT_CLOSED` linked to accounting (Xero, QBO etc.)
 
 When the duplicate customer is deleted, those sales will ultimately have an "Anonymous Customer" on the sale.
 
