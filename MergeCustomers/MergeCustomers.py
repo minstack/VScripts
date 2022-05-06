@@ -31,6 +31,12 @@ failed_response = ['response']
 registers = api.getRegisters('true')
 regidlookup = {}
 
+SALE_KEYS_REMOVE = [
+    'complete_open_sequence_id',
+    'accounts_transaction_id',
+    'has_unsynced_on_account_payments'
+]
+
 def isDeletedRegister(register_id):
     reg = regidlookup.get(register_id)
 
@@ -55,6 +61,9 @@ def updateCustomerOnSales(sales, cust_id):
             failed_response.append('cannot merge')
             print("Failed: Deleted register")
             continue
+            
+        for key in SALE_KEYS_REMOVE:
+            s.pop(key)
 
         resp = api.postSale(s)
 
