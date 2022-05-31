@@ -102,12 +102,24 @@ def mergeCustomers(deleting, merging):
         merge_id = custToId.get(merge, None)
 
         if delete_id is None:
+            failed_ids.append(delete)
+            failed_sales.append('-')
+            failed_codes.append('-')
+            failed_response.append(f'Customer with customer_code {delete} does not exist.')
+
             print(f"{delete} does not exist in {prefix}.")
-            break
+            i+=1
+            continue
 
         if merge_id is None:
+            failed_ids.append(merge)
+            failed_sales.append('-')
+            failed_codes.append('-')
+            failed_response.append(f'Customer with customer_code {merge} does not exist.')
+
             print(f"{merge} does not exist in {prefix}.")
-            break
+            i+=1
+            continue
 
         deleteSales = api.getCustomerSales(delete_id)
 
