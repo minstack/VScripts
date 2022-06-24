@@ -3,8 +3,8 @@ from VendApi2 import *
 import CsvUtil as cu
 
 
-domain = 'sungstore'
-token = 'KWDZNSo67gRgSGAU3G2vT_IMDDT611m9s40eVisq'
+domain = ''
+token = ''
 
  #the product_id to search for in the inventory endpoint
 prod_id = '2598c236-c76c-2a64-4aee-a410a54af7d2'
